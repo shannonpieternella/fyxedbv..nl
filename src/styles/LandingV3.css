@@ -155,3 +155,18 @@
 .v3-split-legend .dot.fyxed { background: #bf5af2; }
 .v3-split-legend .dot.client { background: #30d158; }
 .v3-disclaimer { margin-top: 10px; color: var(--color-gray-600); font-size: var(--font-size-sm); }
+
+/* COMPARISON V3 */
+.v3-compare { background: #fff; padding: clamp(2.5rem, 6vw, 4rem) 0; }
+.v3-compare-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
+@media (max-width: 1024px){ .v3-compare-grid { grid-template-columns: 1fr; } }
+.v3-col { border:1px solid var(--color-gray-200); border-radius: 18px; background:#fff; padding: 18px; box-shadow: var(--shadow-md); }
+.v3-col.dim { background: linear-gradient(180deg,#f8f9fb,#ffffff); }
+.v3-badge-title { display:inline-block; font-weight: 800; color: var(--color-gray-900); margin-bottom: 10px; }
+.v3-list { list-style: none; padding: 0; margin: 0; display:flex; flex-direction: column; gap: 8px; }
+.v3-list li { color: var(--color-gray-700); display:flex; gap: 10px; align-items:flex-start; }
+.v3-list li i { display:inline-block; width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; background: var(--color-blue); box-shadow: 0 6px 14px rgba(0,122,255,.25); }
+
+.v3-compare-foot { margin-top: 16px; }
+.v3-foot-card { display:flex; justify-content: space-between; align-items: center; gap: 12px; border:1px solid var(--color-gray-200); border-radius: 18px; background:#fff; padding: 14px 16px; box-shadow: var(--shadow-md); }
+@media (max-width: 640px){ .v3-foot-card { flex-direction: column; align-items: flex-start; } }

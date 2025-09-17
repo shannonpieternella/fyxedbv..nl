@@ -9,6 +9,7 @@ import ProblemsV3 from '../components/v3/ProblemsV3';
 import CapabilitiesV3 from '../components/v3/CapabilitiesV3';
 import LiveDemoV3 from '../components/v3/LiveDemoV3';
 import CalculatorV3 from '../components/v3/CalculatorV3';
+import ComparisonV3 from '../components/v3/ComparisonV3';
 import ProblemSolution from '../components/ProblemSolution';
 import ProblemsAndSolutions from '../components/ProblemsAndSolutions';
 import Services from '../components/Services';
@@ -39,6 +40,7 @@ const HomePage: React.FC = () => {
       <ProofBar />
       <ProblemsV3 />
       <CapabilitiesV3 />
+      <ComparisonV3 />
       <LiveDemoV3 />
       <CalculatorV3 />
 

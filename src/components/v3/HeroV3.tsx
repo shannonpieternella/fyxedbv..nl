@@ -7,11 +7,11 @@ const HeroV3: React.FC = () => {
     <section id="hero" className="v3-hero">
       <div className="v3-container v3-hero-grid">
         <div className="v3-hero-copy">
-          <span className="v3-eyebrow">AI Voice Agents • 24/7</span>
-          <h1 className="v3-title">AI-gestuurde klantenservice die nooit stopt.</h1>
+          <span className="v3-eyebrow">AI‑medewerkers • Inbound & Outbound</span>
+          <h1 className="v3-title">AI‑medewerkers die altijd doorwerken.</h1>
           <p className="v3-subtitle">
-            Professionele AI-assistenten die 24/7 uw klanten ondersteunen, leads kwalificeren en afspraken inplannen.
-            Verhoog uw bereikbaarheid en optimaliseer uw conversies.
+            Zij nemen op, bellen terug, kwalificeren en plannen afspraken in — 24/7, consistent en schaalbaar.
+            Zó heeft u de voordelen van een topmedewerker, zonder de nadelen van een menselijke FTE.
           </p>
           <div className="v3-cta-row">
             <a className="btn-apple btn-apple-primary" href="#cta">Plan een demo</a>
@@ -50,4 +50,3 @@ const HeroV3: React.FC = () => {
 };
 
 export default HeroV3;
-
