@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useLanguage } from '../contexts/LanguageContext';
 import '../styles/CallToAction.css';
 
 const CallToAction: React.FC = () => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3
@@ -47,11 +49,11 @@ const CallToAction: React.FC = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <h2 className="cta-title">
-            Klaar om klanten terug te winnen met AI?
+            {t('cta.title')}
           </h2>
 
           <p className="cta-subtitle">
-            Ontdek hoe Fyxed BV uw bedrijf kan helpen groeien met AI-gestuurde klantenservice en sales.
+            {t('cta.subtitle')}
           </p>
 
           <motion.button
@@ -66,7 +68,7 @@ const CallToAction: React.FC = () => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="button-text">Plan een demo met Fyxed</span>
+            <span className="button-text">{t('cta.button')}</span>
             <motion.div
               className="button-pulse"
               animate={{
@@ -88,7 +90,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span>30 minuten demo</span>
+              <span>{t('cta.benefit.time')}</span>
             </div>
 
             <div className="benefit">
@@ -97,7 +99,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span>Geen verplichtingen</span>
+              <span>{t('cta.benefit.obligation')}</span>
             </div>
 
             <div className="benefit">
@@ -106,7 +108,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span>Direct resultaat zichtbaar</span>
+              <span>{t('cta.benefit.result')}</span>
             </div>
           </div>
         </motion.div>
@@ -120,14 +122,14 @@ const CallToAction: React.FC = () => {
           <div className="demo-preview">
             <div className="demo-screen">
               <div className="demo-header">
-                <span>Live Demo</span>
+                <span>{t('cta.demo.header')}</span>
                 <div className="demo-status">
                   <motion.div
                     className="status-dot"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   />
-                  <span>Online</span>
+                  <span>{t('cta.demo.online')}</span>
                 </div>
               </div>
 
@@ -135,15 +137,15 @@ const CallToAction: React.FC = () => {
                 <div className="demo-metrics">
                   <div className="metric">
                     <span className="metric-value">156</span>
-                    <span className="metric-label">Gesprekken</span>
+                    <span className="metric-label">{t('cta.demo.calls')}</span>
                   </div>
                   <div className="metric">
                     <span className="metric-value">67%</span>
-                    <span className="metric-label">Conversie</span>
+                    <span className="metric-label">{t('cta.demo.conversion')}</span>
                   </div>
                   <div className="metric">
                     <span className="metric-value">€12.4k</span>
-                    <span className="metric-label">Omzet</span>
+                    <span className="metric-label">{t('cta.demo.revenue')}</span>
                   </div>
                 </div>
 

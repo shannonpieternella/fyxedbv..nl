@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import LeadReactivatiePage from './pages/LeadReactivatiePage';
@@ -13,18 +14,20 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/ai-lead-reactivatie" element={<LeadReactivatiePage />} />
-          <Route path="/ai-klantenservice" element={<KlantenservicePage />} />
-          <Route path="/ai-sales-agents" element={<SalesAgentsPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-        </Routes>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/ai-lead-reactivatie" element={<LeadReactivatiePage />} />
+            <Route path="/ai-klantenservice" element={<KlantenservicePage />} />
+            <Route path="/ai-sales-agents" element={<SalesAgentsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </LanguageProvider>
     </Router>
   );
 }

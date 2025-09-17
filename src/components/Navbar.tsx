@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -43,26 +46,27 @@ const Navbar: React.FC = () => {
 
         <div className="navbar-menu">
           <button onClick={() => scrollToSection('hero')} className="navbar-link">
-            Home
+            {t('nav.home')}
           </button>
           <button onClick={() => scrollToSection('services')} className="navbar-link">
-            Services
+            {t('nav.services')}
           </button>
           <button onClick={() => scrollToSection('cases')} className="navbar-link">
             Cases
           </button>
           <button onClick={() => scrollToSection('cta')} className="navbar-link">
-            Contact
+            {t('nav.contact')}
           </button>
         </div>
 
         <div className="navbar-cta">
+          <LanguageSwitcher />
           <a className="navbar-phone" href="tel:+3197010250463">+31 (970) 102 50463</a>
           <button
             onClick={() => scrollToSection('cta')}
             className="navbar-demo-btn"
           >
-            Plan een demo
+            {t('nav.demo')}
           </button>
         </div>
       </div>

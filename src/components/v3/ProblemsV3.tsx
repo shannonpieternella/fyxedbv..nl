@@ -1,20 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../contexts/LanguageContext';
 import '../../styles/LandingV3.css';
 
-const problems = [
-  { icon: '📧', text: 'E-mails verdwijnen in overvolle inboxen' },
-  { icon: '📱', text: "SMS'jes worden steeds vaker genegeerd" },
-  { icon: '☎️', text: 'Telefonische bereikbaarheid is beperkt tot kantooruren' },
-  { icon: '🤝', text: 'Maar persoonlijk contact maakt nog altijd het verschil' },
-];
-
 const ProblemsV3: React.FC = () => {
+  const { t } = useLanguage();
+
+  const problems = [
+    { icon: '📧', textKey: 'problems.email' },
+    { icon: '📱', textKey: 'problems.sms' },
+    { icon: '☎️', textKey: 'problems.phone' },
+    { icon: '🤝', textKey: 'problems.contact' },
+  ];
+
   return (
     <section id="problems-v3" className="v3-problems">
       <div className="v3-container v3-problems-grid">
         <div className="v3-problems-left">
-          <h2 className="v3-problems-title">Uw klanten verdienen meer dan een voicemail.</h2>
+          <h2 className="v3-problems-title">{t('problems.title')}</h2>
           <div className="v3-timeline">
             {problems.map((p, idx) => (
               <motion.div
@@ -26,7 +29,7 @@ const ProblemsV3: React.FC = () => {
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
               >
                 <div className="v3-problem-icon" aria-hidden>{p.icon}</div>
-                <div className="v3-problem-text">{p.text}</div>
+                <div className="v3-problem-text">{t(p.textKey)}</div>
               </motion.div>
             ))}
           </div>
@@ -40,16 +43,16 @@ const ProblemsV3: React.FC = () => {
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="v3-solution-title">Onze AI-oplossing</h3>
+            <h3 className="v3-solution-title">{t('problems.solution.title')}</h3>
             <p className="v3-solution-desc">
-              Continue, professionele communicatie met uw klanten - 24/7 beschikbaar, altijd vriendelijk en nooit een gemiste kans.
+              {t('problems.solution.desc')}
             </p>
 
             <div className="v3-solution-badges">
-              <span className="v3-badge">Inbound support</span>
-              <span className="v3-badge">Outbound follow-ups</span>
-              <span className="v3-badge">Realtime kwalificatie</span>
-              <span className="v3-badge">Direct doorverbinden</span>
+              <span className="v3-badge">{t('problems.badge.inbound')}</span>
+              <span className="v3-badge">{t('problems.badge.outbound')}</span>
+              <span className="v3-badge">{t('problems.badge.qualification')}</span>
+              <span className="v3-badge">{t('problems.badge.connect')}</span>
             </div>
 
             <div className="v3-flow">

@@ -1,27 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../contexts/LanguageContext';
 import '../../styles/LandingV3.css';
 
 const HeroV3: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="v3-hero">
       <div className="v3-container v3-hero-grid">
         <div className="v3-hero-copy">
-          <span className="v3-eyebrow">AI‑medewerkers • Inbound & Outbound</span>
-          <h1 className="v3-title">AI‑medewerkers die altijd doorwerken.</h1>
+          <span className="v3-eyebrow">{t('hero.eyebrow')}</span>
+          <h1 className="v3-title">{t('hero.title')}</h1>
           <p className="v3-subtitle">
-            Zij nemen op, bellen terug, kwalificeren en plannen afspraken in — 24/7, consistent en schaalbaar.
-            Zó heeft u de voordelen van een topmedewerker, zonder de nadelen van een menselijke FTE.
+            {t('hero.subtitle')}
           </p>
           <div className="v3-cta-row">
-            <a className="btn-apple btn-apple-primary" href="#cta">Plan een demo</a>
-            <a className="btn-apple btn-apple-secondary" href="#services">Ontdek onze diensten</a>
+            <a className="btn-apple btn-apple-primary" href="#cta">{t('hero.cta.primary')}</a>
+            <a className="btn-apple btn-apple-secondary" href="#services">{t('hero.cta.secondary')}</a>
           </div>
           <div className="v3-hero-chips">
-            <span className="v3-chip">Inbound calls</span>
-            <span className="v3-chip">Outbound calls</span>
-            <span className="v3-chip">Realtime kwalificatie</span>
-            <span className="v3-chip">Afspraken plannen</span>
+            <span className="v3-chip">{t('hero.chip.inbound')}</span>
+            <span className="v3-chip">{t('hero.chip.outbound')}</span>
+            <span className="v3-chip">{t('hero.chip.qualification')}</span>
+            <span className="v3-chip">{t('hero.chip.scheduling')}</span>
           </div>
         </div>
 
