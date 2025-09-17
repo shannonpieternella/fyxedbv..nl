@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import '../styles/CallToAction.css';
+import '../../styles/CallToAction.css';
 
-const CallToAction: React.FC = () => {
+const CallToActionEN: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3
@@ -47,11 +47,11 @@ const CallToAction: React.FC = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <h2 className="cta-title">
-            Klaar om klanten terug te winnen met AI?
+            Ready to win back customers with AI?
           </h2>
 
           <p className="cta-subtitle">
-            Ontdek hoe Fyxed BV uw bedrijf kan helpen groeien met AI-gestuurde klantenservice en sales.
+            Discover how Fyxed BV can help your business grow with AI-driven customer service and sales.
           </p>
 
           <motion.button
@@ -66,7 +66,7 @@ const CallToAction: React.FC = () => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="button-text">Plan een demo met Fyxed</span>
+            <span className="button-text">Schedule a demo with Fyxed</span>
             <motion.div
               className="button-pulse"
               animate={{
@@ -88,7 +88,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span>30 minuten demo</span>
+              <span>30-minute demo</span>
             </div>
 
             <div className="benefit">
@@ -97,7 +97,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span>Geen verplichtingen</span>
+              <span>No obligations</span>
             </div>
 
             <div className="benefit">
@@ -106,7 +106,7 @@ const CallToAction: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span>Direct resultaat zichtbaar</span>
+              <span>Immediate results visible</span>
             </div>
           </div>
         </motion.div>
@@ -135,15 +135,15 @@ const CallToAction: React.FC = () => {
                 <div className="demo-metrics">
                   <div className="metric">
                     <span className="metric-value">156</span>
-                    <span className="metric-label">Gesprekken</span>
+                    <span className="metric-label">Calls</span>
                   </div>
                   <div className="metric">
                     <span className="metric-value">67%</span>
-                    <span className="metric-label">Conversie</span>
+                    <span className="metric-label">Conversion</span>
                   </div>
                   <div className="metric">
                     <span className="metric-value">€12.4k</span>
-                    <span className="metric-label">Omzet</span>
+                    <span className="metric-label">Revenue</span>
                   </div>
                 </div>
 
@@ -176,4 +176,4 @@ const CallToAction: React.FC = () => {
   );
 };
 
-export default CallToAction;
+export default CallToActionEN;

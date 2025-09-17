@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../contexts/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
 import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
-  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,27 +43,41 @@ const Navbar: React.FC = () => {
 
         <div className="navbar-menu">
           <button onClick={() => scrollToSection('hero')} className="navbar-link">
-            {t('nav.home')}
+            Home
           </button>
           <button onClick={() => scrollToSection('services')} className="navbar-link">
-            {t('nav.services')}
+            Services
           </button>
           <button onClick={() => scrollToSection('cases')} className="navbar-link">
             Cases
           </button>
           <button onClick={() => scrollToSection('cta')} className="navbar-link">
-            {t('nav.contact')}
+            Contact
           </button>
         </div>
 
         <div className="navbar-cta">
-          <LanguageSwitcher />
+          <div className="language-links">
+            <a
+              href="/"
+              className={`lang-link ${!location.pathname.startsWith('/en') ? 'active' : ''}`}
+            >
+              NL
+            </a>
+            <span className="lang-separator">|</span>
+            <a
+              href="/en"
+              className={`lang-link ${location.pathname.startsWith('/en') ? 'active' : ''}`}
+            >
+              EN
+            </a>
+          </div>
           <a className="navbar-phone" href="tel:+3197010250463">+31 (970) 102 50463</a>
           <button
             onClick={() => scrollToSection('cta')}
             className="navbar-demo-btn"
           >
-            {t('nav.demo')}
+            Plan een demo
           </button>
         </div>
       </div>

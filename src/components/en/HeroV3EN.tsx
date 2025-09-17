@@ -2,26 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../../styles/LandingV3.css';
 
-const HeroV3: React.FC = () => {
+const HeroV3EN: React.FC = () => {
   return (
     <section id="hero" className="v3-hero">
       <div className="v3-container v3-hero-grid">
         <div className="v3-hero-copy">
-          <span className="v3-eyebrow">AI‑medewerkers • Inbound & Outbound</span>
-          <h1 className="v3-title">AI‑medewerkers die altijd doorwerken.</h1>
+          <span className="v3-eyebrow">AI Employees • Inbound & Outbound</span>
+          <h1 className="v3-title">AI employees that work around the clock.</h1>
           <p className="v3-subtitle">
-            Zij nemen op, bellen terug, kwalificeren en plannen afspraken in — 24/7, consistent en schaalbaar.
-            Zó heeft u de voordelen van een topmedewerker, zonder de nadelen van een menselijke FTE.
+            They answer calls, call back, qualify leads, and schedule appointments — 24/7, consistent and scalable.
+            Get all the benefits of a top employee, without the drawbacks of human FTEs.
           </p>
           <div className="v3-cta-row">
-            <a className="btn-apple btn-apple-primary" href="#cta">Plan een demo</a>
-            <a className="btn-apple btn-apple-secondary" href="#services">Ontdek onze diensten</a>
+            <a className="btn-apple btn-apple-primary" href="#cta">Schedule a demo</a>
+            <a className="btn-apple btn-apple-secondary" href="#services">Discover our services</a>
           </div>
           <div className="v3-hero-chips">
             <span className="v3-chip">Inbound calls</span>
             <span className="v3-chip">Outbound calls</span>
-            <span className="v3-chip">Realtime kwalificatie</span>
-            <span className="v3-chip">Afspraken plannen</span>
+            <span className="v3-chip">Lead qualification</span>
+            <span className="v3-chip">Appointment scheduling</span>
           </div>
         </div>
 
@@ -49,4 +49,4 @@ const HeroV3: React.FC = () => {
   );
 };
 
-export default HeroV3;
+export default HeroV3EN;
