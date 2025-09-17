@@ -1,6 +1,6 @@
 /* Landing V3 – Next-level Apple/Webflow style */
 
-.v3-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-6); }
+.v3-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-6); overflow-x: hidden; }
 
 /* HERO */
 .v3-hero { position: relative; padding: clamp(4rem, 8vw, 8rem) 0 clamp(2rem, 6vw, 4rem); background: linear-gradient(180deg, #ffffff, #f7f8fa); overflow: hidden; }
@@ -45,6 +45,7 @@
 @media (max-width: 1024px){ .v3-problems-grid { grid-template-columns: 1fr; } }
 
 .v3-problems-left { position: sticky; top: 90px; align-self: start; }
+@media (max-width: 1024px){ .v3-problems-left { position: static; } }
 .v3-problems-title { font-size: clamp(2rem, 5.5vw, 3.5rem); letter-spacing:-0.02em; line-height:1.1; color: var(--color-gray-900); margin: 0 0 18px; font-weight: 800; }
 .v3-timeline { position: relative; padding-left: 20px; }
 .v3-timeline:before { content:''; position:absolute; left: 8px; top: 6px; bottom: 6px; width:2px; background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
@@ -89,7 +90,7 @@
 .v3-bullet-dot { width:8px; height:8px; border-radius:50%; background: var(--color-blue); box-shadow: 0 6px 14px rgba(0,122,255,.25); display:inline-block; }
 
 .v3-panel-right { display:flex; justify-content:center; align-items:center; }
-.v3-stack { position: relative; width: 320px; height: 180px; }
+.v3-stack { position: relative; width: min(320px, 100%); height: 180px; }
 .v3-stack-card { position:absolute; inset: 0; border-radius: 16px; background: linear-gradient(180deg,#f8f9fb,#ffffff); border:1px solid var(--color-gray-200); box-shadow: var(--shadow-lg); }
 .v3-stack-card:nth-child(1){ transform: translate(0,0); z-index:3; }
 .v3-stack-card:nth-child(2){ transform: translate(14px,14px) scale(.98); z-index:2; opacity:.9; }
@@ -169,4 +170,5 @@
 
 .v3-compare-foot { margin-top: 16px; }
 .v3-foot-card { display:flex; justify-content: space-between; align-items: center; gap: 12px; border:1px solid var(--color-gray-200); border-radius: 18px; background:#fff; padding: 14px 16px; box-shadow: var(--shadow-md); }
+.v3-hero, .v3-problems, .v3-capabilities, .v3-live, .v3-calc, .v3-compare { overflow-x: clip; }
 @media (max-width: 640px){ .v3-foot-card { flex-direction: column; align-items: flex-start; } }
