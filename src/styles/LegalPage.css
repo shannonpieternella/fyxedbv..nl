@@ -1,0 +1,122 @@
+/* Legal Page Styles */
+.legal-page {
+  padding-top: 70px; /* Account for navbar */
+}
+
+/* Legal Hero */
+.legal-hero {
+  background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-700) 100%);
+  padding: var(--spacing-16) 0;
+  position: relative;
+}
+
+.legal-hero-container {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+.legal-hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.legal-hero-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-tight);
+}
+
+@media (min-width: 768px) {
+  .legal-hero-title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+.legal-hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-300);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Legal Content */
+.legal-content {
+  background-color: var(--color-white);
+  padding: var(--spacing-16) 0;
+}
+
+.legal-content-container {
+  max-width: var(--container-md);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+.legal-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-700);
+}
+
+.legal-text h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 2px solid var(--color-gray-200);
+  padding-bottom: var(--spacing-2);
+}
+
+.legal-text h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-text p {
+  margin-bottom: var(--spacing-4);
+}
+
+.legal-text ul, .legal-text ol {
+  margin: var(--spacing-4) 0;
+  padding-left: var(--spacing-6);
+}
+
+.legal-text li {
+  margin-bottom: var(--spacing-2);
+}
+
+.legal-text strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+}
+
+/* Contact information styling */
+.legal-text p:has(strong:contains("E-mail")) {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-blue);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .legal-content {
+    padding: var(--spacing-20) 0;
+  }
+
+  .legal-content-container {
+    padding: 0 var(--spacing-8);
+  }
+
+  .legal-text {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .legal-content-container {
+    padding: 0 var(--spacing-10);
+  }
+}

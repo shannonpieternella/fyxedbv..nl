@@ -1,0 +1,196 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  transition: all var(--transition-normal);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid transparent;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom-color: var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+  max-width: var(--container-2xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 0 var(--spacing-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-container {
+    padding: 0 var(--spacing-10);
+  }
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  letter-spacing: -0.01em;
+}
+
+.navbar-logo:hover {
+  color: var(--color-gray-700);
+  transform: scale(1.02);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex;
+  }
+}
+
+.navbar-link {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-600);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-link:hover {
+  color: var(--color-black);
+  background-color: var(--color-gray-50);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
+}
+
+.navbar-link:hover::after { width: 40%; }
+
+/* CTA Button */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-phone {
+  margin-right: var(--spacing-3);
+  color: var(--color-gray-700);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-phone { display: none; }
+}
+
+.navbar-demo-btn {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .navbar-demo-btn {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--font-size-base);
+  }
+}
+
+.navbar-demo-btn:hover {
+  background-color: var(--color-gray-800);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar-demo-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Menu (optional for future implementation) */
+@media (max-width: 767px) {
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--color-gray-200);
+    padding: var(--spacing-4);
+    flex-direction: column;
+    gap: var(--spacing-2);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .navbar-link {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-3);
+  }
+}
+
+/* Smooth animations for navbar items */
+.navbar-container > * {
+  transition: all var(--transition-normal);
+}
+
+/* Focus states for accessibility */
+.navbar-link:focus,
+.navbar-demo-btn:focus {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar-link,
+  .navbar-demo-btn,
+  .navbar-logo {
+    transition: none;
+  }
+}
