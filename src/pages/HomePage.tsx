@@ -10,7 +10,6 @@ import CapabilitiesV3 from '../components/v3/CapabilitiesV3';
 import LiveDemoV3 from '../components/v3/LiveDemoV3';
 import CalculatorV3 from '../components/v3/CalculatorV3';
 import ComparisonV3 from '../components/v3/ComparisonV3';
-import ProblemSolution from '../components/ProblemSolution';
 import ProblemsAndSolutions from '../components/ProblemsAndSolutions';
 import Services from '../components/Services';
 import CaseStudy from '../components/CaseStudy';

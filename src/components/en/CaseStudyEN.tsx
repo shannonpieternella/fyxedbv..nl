@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import '../styles/CaseStudy.css';
+import '../../styles/CaseStudy.css';
 
-const CaseStudy: React.FC = () => {
+const CaseStudyEN: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2
@@ -31,7 +31,7 @@ const CaseStudy: React.FC = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <h2 className="case-study-title">
-            Ondernemers in verschillende branches werken al met Fyxed BV.
+            Entrepreneurs across various industries are already working with Fyxed BV.
           </h2>
 
           <div className="case-study-stats">
@@ -43,7 +43,7 @@ const CaseStudy: React.FC = () => {
               transition={{ delay: 0.2 }}
             >
               <span className="stat-number">+35%</span>
-              <span className="stat-label">heractivatie van oude klanten</span>
+              <span className="stat-label">reactivation of old customers</span>
             </motion.div>
 
             <motion.div
@@ -54,7 +54,7 @@ const CaseStudy: React.FC = () => {
               transition={{ delay: 0.4 }}
             >
               <span className="stat-number">24/7</span>
-              <span className="stat-label">beschikbaar zonder pauzes</span>
+              <span className="stat-label">available without breaks</span>
             </motion.div>
 
             <motion.div
@@ -65,7 +65,7 @@ const CaseStudy: React.FC = () => {
               transition={{ delay: 0.6 }}
             >
               <span className="stat-number">95%</span>
-              <span className="stat-label">klanttevredenheid</span>
+              <span className="stat-label">customer satisfaction</span>
             </motion.div>
           </div>
         </motion.div>
@@ -82,8 +82,8 @@ const CaseStudy: React.FC = () => {
           <div className="testimonials-container">
             <div className="testimonial">
               <blockquote>
-                "Onze AI-assistent van Fyxed BV heeft onze klantenservice getransformeerd.
-                We kunnen nu 24/7 bereikbaar zijn zonder extra personeel aan te nemen."
+                "Our AI assistant from Fyxed BV has transformed our customer service.
+                We can now be available 24/7 without hiring additional staff."
               </blockquote>
               <cite>
                 <span className="testimonial-name">Marco van der Berg</span>
@@ -93,8 +93,8 @@ const CaseStudy: React.FC = () => {
 
             <div className="testimonial">
               <blockquote>
-                "Sinds we Fyxed gebruiken, missen we geen enkele lead meer.
-                De AI belt precies op het juiste moment en plant automatisch afspraken in."
+                "Since we've been using Fyxed, we don't miss a single lead anymore.
+                The AI calls at exactly the right moment and automatically schedules appointments."
               </blockquote>
               <cite>
                 <span className="testimonial-name">Linda Janssen</span>
@@ -104,8 +104,8 @@ const CaseStudy: React.FC = () => {
 
             <div className="testimonial">
               <blockquote>
-                "Onze klanten waarderen de persoonlijke benadering van de AI-assistent.
-                Het voelt natuurlijk aan en verbetert onze klanttevredenheid aanzienlijk."
+                "Our customers appreciate the personal approach of the AI assistant.
+                It feels natural and significantly improves our customer satisfaction."
               </blockquote>
               <cite>
                 <span className="testimonial-name">Robert de Vries</span>
@@ -125,4 +125,4 @@ const CaseStudy: React.FC = () => {
   );
 };
 
-export default CaseStudy;
+export default CaseStudyEN;
