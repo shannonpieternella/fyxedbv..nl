@@ -1,0 +1,107 @@
+/* VAPI Widget Mobile Responsive Styles */
+
+/* Base widget styles */
+vapi-widget {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  vapi-widget {
+    /* Ensure proper positioning on mobile */
+    bottom: 16px !important;
+    right: 16px !important;
+    max-width: calc(100vw - 32px) !important;
+    max-height: calc(100vh - 100px) !important;
+  }
+
+  /* Widget container adjustments */
+  vapi-widget > div {
+    max-width: 280px !important;
+    max-height: 400px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Chat interface adjustments */
+  vapi-widget .chat-container {
+    padding: 12px !important;
+  }
+
+  /* Button adjustments */
+  vapi-widget button {
+    min-height: 44px !important; /* Touch-friendly height */
+    font-size: 14px !important;
+  }
+
+  /* Input field adjustments */
+  vapi-widget input,
+  vapi-widget textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 12px !important;
+  }
+
+  /* Title adjustments */
+  vapi-widget .widget-title {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+  }
+}
+
+/* Small mobile devices (under 480px) */
+@media (max-width: 480px) {
+  vapi-widget {
+    bottom: 12px !important;
+    right: 12px !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  vapi-widget > div {
+    max-width: 260px !important;
+    max-height: 380px !important;
+  }
+}
+
+/* Very small devices (under 360px) */
+@media (max-width: 360px) {
+  vapi-widget {
+    bottom: 8px !important;
+    right: 8px !important;
+    max-width: calc(100vw - 16px) !important;
+  }
+
+  vapi-widget > div {
+    max-width: 240px !important;
+    max-height: 360px !important;
+  }
+
+  vapi-widget .widget-title {
+    font-size: 12px !important;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  vapi-widget {
+    max-height: calc(100vh - 60px) !important;
+  }
+
+  vapi-widget > div {
+    max-height: 300px !important;
+  }
+}
+
+/* Ensure widget doesn't interfere with page content */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  /* Ensure widget button is accessible */
+  vapi-widget .widget-button {
+    min-width: 56px !important;
+    min-height: 56px !important;
+    border-radius: 28px !important;
+  }
+}
