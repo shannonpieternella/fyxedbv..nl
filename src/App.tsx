@@ -15,6 +15,7 @@ import SalesAgentsPageEN from './pages/en/SalesAgentsPageEN';
 import PrivacyPageEN from './pages/en/PrivacyPageEN';
 import TermsPageEN from './pages/en/TermsPageEN';
 import Footer from './components/Footer';
+import VapiWidget from './components/VapiWidget';
 import './styles/App.css';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/en/terms" element={<TermsPageEN />} />
         </Routes>
         <Footer />
+        <VapiWidget />
       </div>
     </Router>
   );
