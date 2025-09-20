@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/VapiWidget.css';
 
 const VapiWidget: React.FC = () => {
   const location = useLocation();
   const isEnglish = location.pathname.startsWith('/en');
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if device is mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   useEffect(() => {
     // Load VAPI script if not already loaded
@@ -47,26 +35,8 @@ const VapiWidget: React.FC = () => {
     widget.setAttribute('cta-button-color', '#000000');
     widget.setAttribute('cta-button-text-color', '#ffffff');
     widget.setAttribute('border-radius', 'large');
-
-    // Responsive size and position settings
-    if (isMobile) {
-      // Use smaller size for mobile
-      const isVerySmall = window.innerWidth <= 360;
-      widget.setAttribute('size', isVerySmall ? 'small' : 'medium');
-      widget.setAttribute('position', 'bottom-right');
-
-      // Add mobile-specific attributes
-      if (isVerySmall) {
-        widget.setAttribute('width', '240px');
-        widget.setAttribute('height', '360px');
-      } else {
-        widget.setAttribute('width', '280px');
-        widget.setAttribute('height', '400px');
-      }
-    } else {
-      widget.setAttribute('size', 'full');
-      widget.setAttribute('position', 'bottom-right');
-    }
+    widget.setAttribute('size', 'compact');
+    widget.setAttribute('position', 'bottom-right');
     widget.setAttribute('voice-show-transcript', 'true');
     widget.setAttribute('consent-required', 'true');
     widget.setAttribute('consent-storage-key', 'vapi_widget_consent');
@@ -100,7 +70,7 @@ const VapiWidget: React.FC = () => {
         widgetToRemove.remove();
       }
     };
-  }, [isEnglish, isMobile]); // Re-run when language or mobile state changes
+  }, [isEnglish]); // Re-run when language changes
 
   return null; // This component doesn't render anything visible
 };
