@@ -31,7 +31,7 @@ const VapiWidget: React.FC = () => {
     widget.setAttribute('mode', 'chat');
     widget.setAttribute('theme', 'dark');
     widget.setAttribute('base-bg-color', '#000000');
-    widget.setAttribute('accent-color', '#14B8A6');
+    widget.setAttribute('accent-color', '#0850e0');
     widget.setAttribute('cta-button-color', '#000000');
     widget.setAttribute('cta-button-text-color', '#ffffff');
     widget.setAttribute('border-radius', 'large');
