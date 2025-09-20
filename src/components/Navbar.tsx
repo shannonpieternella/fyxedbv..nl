@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const isEnglish = location.pathname.startsWith('/en');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +20,9 @@ const Navbar: React.FC = () => {
 
   const scrollToSection = (sectionId: string) => {
     // If we're not on home, navigate to home with hash so HomePage can handle scroll
-    if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`);
+    const homePath = isEnglish ? '/en' : '/';
+    if (location.pathname !== homePath) {
+      navigate(`${homePath}#${sectionId}`);
       return;
     }
     const element = document.getElementById(sectionId);
@@ -46,7 +48,7 @@ const Navbar: React.FC = () => {
             Home
           </button>
           <button onClick={() => scrollToSection('services')} className="navbar-link">
-            Services
+            {isEnglish ? 'Services' : 'Services'}
           </button>
           <button onClick={() => scrollToSection('cases')} className="navbar-link">
             Cases
@@ -77,7 +79,7 @@ const Navbar: React.FC = () => {
             onClick={() => scrollToSection('cta')}
             className="navbar-demo-btn"
           >
-            Plan een demo
+            {isEnglish ? 'Schedule a demo' : 'Plan een demo'}
           </button>
         </div>
       </div>
