@@ -7,6 +7,10 @@ import HeroV3EN from '../../components/en/HeroV3EN';
 import ProofBarEN from '../../components/en/ProofBarEN';
 import ProblemsV3EN from '../../components/en/ProblemsV3EN';
 import CapabilitiesV3EN from '../../components/en/CapabilitiesV3EN';
+import ComparisonV3EN from '../../components/en/ComparisonV3EN';
+import LiveDemoV3EN from '../../components/en/LiveDemoV3EN';
+import CalculatorV3EN from '../../components/en/CalculatorV3EN';
+import ProblemsAndSolutionsEN from '../../components/en/ProblemsAndSolutionsEN';
 import ServicesEN from '../../components/en/ServicesEN';
 import CaseStudyEN from '../../components/en/CaseStudyEN';
 import BusinessModelEN from '../../components/en/BusinessModelEN';
@@ -35,13 +39,15 @@ const HomePageEN: React.FC = () => {
       <ProofBarEN />
       <ProblemsV3EN />
       <CapabilitiesV3EN />
+      <ComparisonV3EN />
+      <LiveDemoV3EN />
+      <CalculatorV3EN />
 
-      {/* English Services */}
+      {/* English Services and Problems */}
+      <ProblemsAndSolutionsEN />
       <ServicesEN />
       <CaseStudyEN />
       <BusinessModelEN />
-
-      {/* English CTA */}
       <CallToActionEN />
     </ScrollProvider>
   );

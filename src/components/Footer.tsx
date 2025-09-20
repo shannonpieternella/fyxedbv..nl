@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer: React.FC = () => {
+  const location = useLocation();
+  const isEnglish = location.pathname.startsWith('/en');
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -33,13 +36,16 @@ const Footer: React.FC = () => {
               Fyxed BV
             </motion.h3>
             <p className="footer-tagline">
-              AI-assistenten die werken, zodat u kunt groeien.
+              {isEnglish
+                ? "AI assistants that work, so you can grow."
+                : "AI-assistenten die werken, zodat u kunt groeien."
+              }
             </p>
           </div>
 
           <nav className="footer-nav">
             <div className="footer-nav-section">
-              <h4 className="footer-nav-title">Navigatie</h4>
+              <h4 className="footer-nav-title">{isEnglish ? "Navigation" : "Navigatie"}</h4>
               <ul className="footer-nav-list">
                 <li>
                   <motion.button
@@ -58,7 +64,7 @@ const Footer: React.FC = () => {
                     variants={linkVariants}
                     whileHover="hover"
                   >
-                    Services
+                    {isEnglish ? "Services" : "Services"}
                   </motion.button>
                 </li>
                 <li>
@@ -68,7 +74,7 @@ const Footer: React.FC = () => {
                     variants={linkVariants}
                     whileHover="hover"
                   >
-                    Cases
+                    {isEnglish ? "Cases" : "Cases"}
                   </motion.button>
                 </li>
                 <li>
@@ -78,39 +84,39 @@ const Footer: React.FC = () => {
                     variants={linkVariants}
                     whileHover="hover"
                   >
-                    Contact
+                    {isEnglish ? "Contact" : "Contact"}
                   </motion.button>
                 </li>
               </ul>
             </div>
 
             <div className="footer-nav-section">
-              <h4 className="footer-nav-title">Services</h4>
+              <h4 className="footer-nav-title">{isEnglish ? "Services" : "Services"}</h4>
               <ul className="footer-nav-list">
                 <li>
-                  <Link to="/ai-lead-reactivatie">
+                  <Link to={isEnglish ? "/en/ai-lead-reactivation" : "/ai-lead-reactivatie"}>
                     <motion.span
                       className="footer-link"
                       variants={linkVariants}
                       whileHover="hover"
                     >
-                      AI Lead Reactivatie
+                      {isEnglish ? "AI Lead Reactivation" : "AI Lead Reactivatie"}
                     </motion.span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ai-klantenservice">
+                  <Link to={isEnglish ? "/en/ai-customer-service" : "/ai-klantenservice"}>
                     <motion.span
                       className="footer-link"
                       variants={linkVariants}
                       whileHover="hover"
                     >
-                      AI Klantenservice
+                      {isEnglish ? "AI Customer Service" : "AI Klantenservice"}
                     </motion.span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ai-sales-agents">
+                  <Link to={isEnglish ? "/en/ai-sales-agents" : "/ai-sales-agents"}>
                     <motion.span
                       className="footer-link"
                       variants={linkVariants}
@@ -124,7 +130,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="footer-nav-section">
-              <h4 className="footer-nav-title">Contact</h4>
+              <h4 className="footer-nav-title">{isEnglish ? "Contact" : "Contact"}</h4>
               <ul className="footer-nav-list">
                 <li>
                   <motion.a
@@ -143,7 +149,7 @@ const Footer: React.FC = () => {
                     variants={linkVariants}
                     whileHover="hover"
                   >
-                    Plan een demo
+                    {isEnglish ? "Schedule a demo" : "Plan een demo"}
                   </motion.button>
                 </li>
               </ul>
@@ -154,26 +160,26 @@ const Footer: React.FC = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © {currentYear} Fyxed BV. Alle rechten voorbehouden.
+              © {currentYear} Fyxed BV. {isEnglish ? "All rights reserved." : "Alle rechten voorbehouden."}
             </p>
 
             <div className="footer-links">
-              <Link to="/privacy">
+              <Link to={isEnglish ? "/en/privacy" : "/privacy"}>
                 <motion.span
                   className="footer-bottom-link"
                   variants={linkVariants}
                   whileHover="hover"
                 >
-                  Privacybeleid
+                  {isEnglish ? "Privacy Policy" : "Privacybeleid"}
                 </motion.span>
               </Link>
-              <Link to="/terms">
+              <Link to={isEnglish ? "/en/terms" : "/terms"}>
                 <motion.span
                   className="footer-bottom-link"
                   variants={linkVariants}
                   whileHover="hover"
                 >
-                  Algemene Voorwaarden
+                  {isEnglish ? "Terms & Conditions" : "Algemene Voorwaarden"}
                 </motion.span>
               </Link>
             </div>
