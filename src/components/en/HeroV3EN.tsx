@@ -14,7 +14,7 @@ const HeroV3EN: React.FC = () => {
             Get all the benefits of a top employee, without the drawbacks of human FTEs.
           </p>
           <div className="v3-cta-row">
-            <a className="btn-apple btn-apple-primary" href="#cta">Schedule a demo</a>
+            <a className="btn-apple btn-apple-primary" href="https://calendly.com/fyxedbv/30min" target="_blank" rel="noopener noreferrer">Schedule a demo</a>
             <a className="btn-apple btn-apple-secondary" href="#services">Discover our services</a>
           </div>
           <div className="v3-hero-chips">

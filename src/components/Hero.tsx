@@ -68,12 +68,14 @@ const Hero: React.FC = () => {
             animate="visible"
           >
             <div className="hero-ctas">
-              <button
-                onClick={() => scrollToSection('cta')}
+              <a
+                href="https://calendly.com/fyxedbv/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-apple btn-apple-primary hero-btn"
               >
                 Plan een demo met Fyxed
-              </button>
+              </a>
               <button
                 onClick={() => scrollToSection('services')}
                 className="btn-apple btn-apple-secondary"

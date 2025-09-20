@@ -143,14 +143,16 @@ const Footer: React.FC = () => {
                   </motion.a>
                 </li>
                 <li>
-                  <motion.button
-                    onClick={() => scrollToSection('cta')}
+                  <motion.a
+                    href="https://calendly.com/fyxedbv/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="footer-link"
                     variants={linkVariants}
                     whileHover="hover"
                   >
                     {isEnglish ? "Schedule a demo" : "Plan een demo"}
-                  </motion.button>
+                  </motion.a>
                 </li>
               </ul>
             </div>

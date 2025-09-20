@@ -163,10 +163,7 @@ const ProblemsAndSolutions: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              const element = document.getElementById('cta');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
+              window.open('https://calendly.com/fyxedbv/30min', '_blank');
             }}
           >
             Plan uw gratis demo nu

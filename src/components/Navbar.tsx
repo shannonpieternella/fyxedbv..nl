@@ -75,12 +75,14 @@ const Navbar: React.FC = () => {
             </a>
           </div>
           <a className="navbar-phone" href="tel:+3197010250463">+31 (970) 102 50463</a>
-          <button
-            onClick={() => scrollToSection('cta')}
+          <a
+            href="https://calendly.com/fyxedbv/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="navbar-demo-btn"
           >
             {isEnglish ? 'Schedule a demo' : 'Plan een demo'}
-          </button>
+          </a>
         </div>
       </div>
     </motion.nav>

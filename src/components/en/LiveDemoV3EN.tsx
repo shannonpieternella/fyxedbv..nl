@@ -39,7 +39,7 @@ const LiveDemoV3EN: React.FC = () => {
           </div>
 
           <div className="v3-cta-row" style={{ marginTop: 16 }}>
-            <a className="btn-apple btn-apple-primary" href="#cta">Schedule a demo</a>
+            <a className="btn-apple btn-apple-primary" href="https://calendly.com/fyxedbv/30min" target="_blank" rel="noopener noreferrer">Schedule a demo</a>
             <a className="btn-apple btn-apple-secondary" href="/en/ai-customer-service">View customer service</a>
           </div>
         </div>

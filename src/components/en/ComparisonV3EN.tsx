@@ -39,7 +39,7 @@ const ComparisonV3EN: React.FC = () => {
             <div>
               <strong>In summary:</strong> our AI employees feel like top-tier service, are always available, and deliver predictable results.
             </div>
-            <a className="btn-apple btn-apple-primary" href="#cta">Schedule a demo</a>
+            <a className="btn-apple btn-apple-primary" href="https://calendly.com/fyxedbv/30min" target="_blank" rel="noopener noreferrer">Schedule a demo</a>
           </div>
           <p className="v3-disclaimer">Prices and results vary by company; we'll discuss this during the demo.</p>
         </div>

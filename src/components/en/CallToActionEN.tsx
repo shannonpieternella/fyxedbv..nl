@@ -33,8 +33,7 @@ const CallToActionEN: React.FC = () => {
   };
 
   const handleDemoClick = () => {
-    // In a real application, this would integrate with Calendly or another booking system
-    window.open('https://calendly.com/fyxed-bv', '_blank');
+    window.open('https://calendly.com/fyxedbv/30min', '_blank');
   };
 
   return (
